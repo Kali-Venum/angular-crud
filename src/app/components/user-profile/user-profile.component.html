@@ -1,0 +1,21 @@
+<h1>User profile component.</h1>
+
+<p>Name:- {{ name }}</p>
+<p>Name:- {{ age }}</p>
+<p>Name:- {{ salary }}</p>
+
+<button [disabled]="isButtonDisabled">Click me</button>
+
+<input type="text" (change)="onChangeHandler($event)" />
+
+<h1>Input - {{ inputValue }}</h1>
+
+<input type="text" [(ngModel)]="inputValue" />
+
+<div>
+  @for(user of users; track user.name){
+  <h5>
+    Name:- {{ user.name }}, Age:- {{ user.age }}, Salary:- {{ user.salary }}
+  </h5>
+  }
+</div>
