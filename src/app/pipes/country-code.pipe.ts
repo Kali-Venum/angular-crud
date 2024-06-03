@@ -5,7 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class CountryCodePipe implements PipeTransform {
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return `+91 ${value}`;
+  transform(value: string, countryName?: string): string {
+    let code = '+91';
+    if (countryName === 'USA') code = '+1';
+    return `${code} ${value}`;
   }
 }
