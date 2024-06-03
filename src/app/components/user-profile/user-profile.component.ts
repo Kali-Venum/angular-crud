@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CountryCodePipe } from '../../pipes/country-code.pipe';
+import { HighlightDirective } from '../../directives/highlight.directive';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule, CommonModule, CountryCodePipe],
+  imports: [FormsModule, CommonModule, CountryCodePipe, HighlightDirective],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })
@@ -19,6 +20,8 @@ export class UserProfileComponent {
   inputValue = 'Enter your name';
 
   phoneNumber = "123456789"
+
+  bgColor="blue"
 
   users = [
     {

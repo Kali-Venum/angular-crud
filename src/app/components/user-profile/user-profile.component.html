@@ -1,6 +1,6 @@
 <h1>User profile component.</h1>
 
-<p>Name:- {{ name }}</p>
+<p [style.backgroundColor]="bgColor">Name:- {{ name }}</p>
 <p>Name:- {{ age }}</p>
 <p>Name:- {{ salary }}</p>
 
@@ -28,4 +28,4 @@
   </h4>
 </div>
 
-<h2>{{phoneNumber | countryCode:"USA"}}</h2>
+<h2 appHighlight>{{phoneNumber | countryCode:"USA"}}</h2>
